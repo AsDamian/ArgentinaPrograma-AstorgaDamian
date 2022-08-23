@@ -1,11 +1,16 @@
-div{
-    background-color: rgb(0,53,142);
-}
 app-redes{
     float: right;
     margin-top: 2%;
     margin-right: 2%;
 }
+app-login{
+    float:right;
+    margin-top: 2%;
+    margin-right: 2%;
+}
 app-banner{
-    width: 10px;
+    width:75%;
+    margin-top: 1%;
+    margin-left: 10%;
+    margin-right: 10%;
 }

@@ -6,6 +6,10 @@ import { HeaderComponent } from './components/header/header.component';
 import { LogoArgComponent } from './components/logo-arg/logo-arg.component';
 import { RedesComponent } from './components/redes/redes.component';
 import { BannerComponent } from './components/banner/banner.component';
+import { AboutComponent } from './components/about/about.component';
+import { LoginComponent } from './components/login/login.component';
+import { FotoComponent } from './components/foto/foto.component';
+import { SobremiComponent } from './components/sobremi/sobremi.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +17,11 @@ import { BannerComponent } from './components/banner/banner.component';
     HeaderComponent,
     LogoArgComponent,
     RedesComponent,
-    BannerComponent
+    BannerComponent,
+    AboutComponent,
+    LoginComponent,
+    FotoComponent,
+    SobremiComponent
   ],
   imports: [
     BrowserModule
