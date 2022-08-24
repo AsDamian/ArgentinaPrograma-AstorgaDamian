@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -16,6 +16,11 @@ import { EducacionComponent } from './components/educacion/educacion.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 
+import { FormsModule } from '@angular/forms';
+import { NgCircleProgressModule } from 'ng-circle-progress';
+import { TestComponent } from './components/test/test.component';
+import { PieComponent } from './components/pie/pie.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,12 +36,32 @@ import { ProyectosComponent } from './components/proyectos/proyectos.component';
     PuestoComponent,
     EducacionComponent,
     SkillsComponent,
-    ProyectosComponent
+    ProyectosComponent,
+    TestComponent,
+    PieComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    NgCircleProgressModule.forRoot({
+      imageHeight:150,
+      imageWidth:150,
+      radius:100,
+      showImage:true,
+      outerStrokeWidth:16,
+      innerStrokeWidth:8,
+      outerStrokeColor:"#78C000",
+      innerStrokeColor:"#C7E596",
+      animation:true,
+      animationDuration:300,
+     } ),
+  ],
+  exports: [
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
+  ],
 })
 export class AppModule { }
