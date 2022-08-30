@@ -1,31 +1,33 @@
 <div class="container-fluid bg-dark">
-    <div class="container text-warning">
-        <h1 class="display-4 text-center py-5">
-           <b>Experiencia</b> 
-        </h1>
-        <div class="row py-3">
-            <div class="col-lg-3 col-sm-12 display-5"> <img src="../../../assets/logro.png" alt=""> </div>
-            <div class="col-lg-9 col-sm-12 display-5"> 
-                <p> 
-                Puesto 1: Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam deleniti nostrum cum! Exercitationem eaque soluta, odio ipsa corrupti dignissimos hic fugit, omnis odit, repudiandae aspernatur consequuntur porro dolore beatae aut.
-                </p>
-            </div>    
+    <div class="row">
+        <h1>Experiencia laboral</h1>
+        <div class="col-lg-2">
+            <button _ngcontent-ktb-c20="" type="button" class="btn btn-outline-warning" routerLink="/nuevaexp" *ngIf="isLogged">
+                Cargar Experiencia Laboral
+            </button>
         </div>
-        <div class="row py-3">
-            <div class="col-lg-3 col-sm-12 display-5"> <img src="../../../assets/logro.png" alt=""> </div>
-            <div class="col-lg-9 col-sm-12 display-5"> 
-                <p> 
-                Puesto 2: Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam deleniti nostrum cum! Exercitationem eaque soluta, odio ipsa corrupti dignissimos hic fugit, omnis odit, repudiandae aspernatur consequuntur porro dolore beatae aut.
-                </p>
-            </div>    
+    
+        <div class="col lg 1"></div>
+        <div class="col-lg-11">
+            <table class="table text-warning">
+                <tbody>
+                    <tr *ngFor="let Experiencia of expe">
+                        <td>
+                            <h2>{{Experiencia.nombreE}}</h2>
+                        </td>
+                        <td>{{Experiencia.descripcionE}}</td>
+                        <td *ngIf="isLogged">
+                            <button class="btn btn-light" routerLink="/editexp/{{Experiencia.id}}">
+                                <i class="bi bi-pencil-fill"></i> EDITAR</button>
+                        </td>
+                        <td *ngIf="isLogged">
+                            <button class="btn btn-danger" (click)="delete(Experiencia.id)">
+                                <i class="bi bi-trash-fill"></i> BORRAR</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-        <div class="row py-3">
-            <div class="col-lg-3 col-sm-12 display-5"> <img src="../../../assets/logro.png" alt=""> </div>
-            <div class="col-lg-9 col-sm-12 display-5"> 
-                <p> 
-                Puesto 3: Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam deleniti nostrum cum! Exercitationem eaque soluta, odio ipsa corrupti dignissimos hic fugit, omnis odit, repudiandae aspernatur consequuntur porro dolore beatae aut.
-                </p>
-            </div>    
-        </div>
+    
     </div>
 </div>

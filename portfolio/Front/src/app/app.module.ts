@@ -20,6 +20,14 @@ import { FormsModule } from '@angular/forms';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { TestComponent } from './components/test/test.component';
 import { PieComponent } from './components/pie/pie.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './components/home/home.component';
+import { AppRoutingModule } from './app-routing.module';
+import { AccesoComponent } from './components/acceso/acceso.component';
+import { interceptorProvider } from './service/interceptor-service';
+import { NewExperienciaComponent } from './components/experiencia/new-experiencia.component';
+import { EditExperienciaComponent } from './components/experiencia/edit-experiencia.component';
+
 
 @NgModule({
   declarations: [
@@ -38,11 +46,17 @@ import { PieComponent } from './components/pie/pie.component';
     SkillsComponent,
     ProyectosComponent,
     TestComponent,
-    PieComponent
+    PieComponent,
+    HomeComponent,
+    AccesoComponent,
+    NewExperienciaComponent,
+    EditExperienciaComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     FormsModule,
+    AppRoutingModule,
     NgCircleProgressModule.forRoot({
       imageHeight:150,
       imageWidth:150,
@@ -58,7 +72,9 @@ import { PieComponent } from './components/pie/pie.component';
   ],
   exports: [
   ],
-  providers: [],
+  providers: [
+    interceptorProvider
+  ],
   bootstrap: [AppComponent],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
