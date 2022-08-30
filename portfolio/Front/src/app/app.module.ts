@@ -27,6 +27,10 @@ import { AccesoComponent } from './components/acceso/acceso.component';
 import { interceptorProvider } from './service/interceptor-service';
 import { NewExperienciaComponent } from './components/experiencia/new-experiencia.component';
 import { EditExperienciaComponent } from './components/experiencia/edit-experiencia.component';
+import { NeweducacionComponent } from './components/educacion/neweducacion.component';
+import { NewproyectosComponent } from './components/proyectos/newproyectos.component';
+import { EditeducacionComponent } from './components/educacion/editeducacion.component';
+import { EditproyectosComponent } from './components/proyectos/editproyectos.component';
 
 
 @NgModule({
@@ -50,7 +54,11 @@ import { EditExperienciaComponent } from './components/experiencia/edit-experien
     HomeComponent,
     AccesoComponent,
     NewExperienciaComponent,
-    EditExperienciaComponent
+    EditExperienciaComponent,
+    NeweducacionComponent,
+    NewproyectosComponent,
+    EditeducacionComponent,
+    EditproyectosComponent
   ],
   imports: [
     HttpClientModule,

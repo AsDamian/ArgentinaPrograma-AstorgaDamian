@@ -1,31 +1,33 @@
 <div class="container-fluid bg-dark">
-    <div class="container text-warning">
-        <h1 class="display-4 text-center py-5">
-           <b>Educación</b> 
-        </h1>
-        <div class="row py-3">
-            <div class="col-lg-3 col-sm-12 display-5"> <img src="../../../assets/edu.png" alt=""> </div>
-            <div class="col-lg-9 col-sm-12 display-5"> 
-                <p> 
-                Puesto 1: Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam deleniti nostrum cum! Exercitationem eaque soluta, odio ipsa corrupti dignissimos hic fugit, omnis odit, repudiandae aspernatur consequuntur porro dolore beatae aut.
-                </p>
-            </div>    
+    <div class="row text-warning">
+        <h1>Educacion</h1>
+        <div class="col-lg-2">
+            <button type="button" class="btn btn-dark" routerLink="/nuevaedu" *ngIf="isLogged">
+                Agregar Educacion
+            </button>
         </div>
-        <div class="row py-3">
-            <div class="col-lg-3 col-sm-12 display-5"> <img src="../../../assets/edu.png" alt=""> </div>
-            <div class="col-lg-9 col-sm-12 display-5"> 
-                <p> 
-                Puesto 2: Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam deleniti nostrum cum! Exercitationem eaque soluta, odio ipsa corrupti dignissimos hic fugit, omnis odit, repudiandae aspernatur consequuntur porro dolore beatae aut.
-                </p>
-            </div>    
+    
+        <div class="col lg 1"></div>
+        <div class="col-lg-11">
+            <table class="table">
+                <tbody>
+                    <tr *ngFor="let Educacion of educacion">
+                        <td>
+                            <h2>{{Educacion.nombreE}}</h2>
+                        </td>
+                        <td>{{Educacion.descripcionE}}</td>
+                        <td *ngIf="isLogged">
+                            <button class="btn btn-light" routerLink="/editedu/{{Educacion.id}}">
+                                <i class="bi bi-pencil-fill"></i> EDITAR</button>
+                        </td>
+                        <td *ngIf="isLogged">
+                            <button class="btn btn-danger" (click)="delete(Educacion.id)">
+                                <i class="bi bi-trash-fill"></i> BORRAR</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-        <div class="row py-3">
-            <div class="col-lg-3 col-sm-12 display-5"> <img src="../../../assets/edu.png" alt=""> </div>
-            <div class="col-lg-9 col-sm-12 display-5"> 
-                <p class="lead"> 
-                Puesto 3: Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam deleniti nostrum cum! Exercitationem eaque soluta, odio ipsa corrupti dignissimos hic fugit, omnis odit, repudiandae aspernatur consequuntur porro dolore beatae aut.
-                </p>
-            </div>    
-        </div>
+    
     </div>
 </div>
