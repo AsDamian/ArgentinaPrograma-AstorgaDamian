@@ -66,9 +66,9 @@ import { EditproyectosComponent } from './components/proyectos/editproyectos.com
     FormsModule,
     AppRoutingModule,
     NgCircleProgressModule.forRoot({
-      imageHeight:150,
-      imageWidth:150,
-      radius:100,
+      imageHeight:120,
+      imageWidth:120,
+      radius:80,
       showImage:true,
       outerStrokeWidth:16,
       innerStrokeWidth:8,

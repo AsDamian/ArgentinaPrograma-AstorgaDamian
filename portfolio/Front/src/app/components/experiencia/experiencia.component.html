@@ -1,6 +1,6 @@
-<div class="container-fluid bg-dark">
+<div class="container bg-dark text-danger">
     <div class="row">
-        <h1>Experiencia laboral</h1>
+        <h1>Experiencia laboral:</h1>
         <div class="col-lg-2">
             <button _ngcontent-ktb-c20="" type="button" class="btn btn-outline-warning" routerLink="/nuevaexp" *ngIf="isLogged">
                 Cargar Experiencia Laboral
@@ -9,11 +9,11 @@
     
         <div class="col lg 1"></div>
         <div class="col-lg-11">
-            <table class="table text-warning">
+            <table class="table table-hover table-dark text-warning">
                 <tbody>
                     <tr *ngFor="let Experiencia of expe">
                         <td>
-                            <h2>{{Experiencia.nombreE}}</h2>
+                            <h3>{{Experiencia.nombreE}}</h3>
                         </td>
                         <td>{{Experiencia.descripcionE}}</td>
                         <td *ngIf="isLogged">

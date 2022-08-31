@@ -1,19 +1,19 @@
-<div class="container-fluid bg-dark text-warning">
-    <div class="row text-warning">
-        <h1>Proyectos</h1>
+<div class="container bg-dark text-danger">
+    <div class="row">
+        <h1>Proyectos:</h1>
         <div class="col-lg-2">
-            <button type="button" class="btn btn-dark" routerLink="/nuevoproy" *ngIf="isLogged">
+            <button _ngcontent-ktb-c20="" type="button" class="btn btn-outline-warning" routerLink="/nuevoproy" *ngIf="isLogged">
                 Agregar Proyectos
             </button>
         </div>
     
         <div class="col lg 1"></div>
         <div class="col-lg-11">
-            <table class="table">
+            <table class="table table-hover table-dark text-warning">
                 <tbody>
                     <tr *ngFor="let Proyectos of proyectos">
                         <td>
-                            <h2>{{Proyectos.nombreE}}</h2>
+                            <h3>{{Proyectos.nombreE}}</h3>
                         </td>
                         <td>{{Proyectos.descripcionE}}</td>
                         <td *ngIf="isLogged">
